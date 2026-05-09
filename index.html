@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nordmarkt Testshop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Nordmarkt Startseite">
+        <span class="brand-mark">N</span>
+        <span>
+          <strong>Nordmarkt</strong>
+          <small>Testshop</small>
+        </span>
+      </a>
+
+      <nav class="top-nav" aria-label="Hauptnavigation">
+        <a href="#produkte">Produkte</a>
+        <a href="#service">Service</a>
+        <a href="#checkout">Checkout</a>
+      </nav>
+
+      <button class="cart-button" type="button" data-open-cart>
+        Warenkorb
+        <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">Kuratiert fuer Alltag, Arbeit und Reise</p>
+          <h1 id="heroTitle">Ein moderner Test-Onlineshop mit echten Shop-Funktionen.</h1>
+          <p>
+            Produkte, Kategorien, Preise und Bestandsdaten kommen aus einer JSON-Datei. Das
+            Design ist responsiv und kann spaeter direkt an echte Inhalte angepasst werden.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#produkte">Produkte ansehen</a>
+            <a class="secondary-action" href="#service">Shop-Anforderungen</a>
+          </div>
+        </div>
+
+        <div class="hero-showcase" aria-label="Ausgewaehlte Shop-Highlights">
+          <div class="showcase-card large">
+            <span>Neu</span>
+            <strong>Urban Pack</strong>
+            <small>ab 89,00 EUR</small>
+          </div>
+          <div class="showcase-card">
+            <span>Top</span>
+            <strong>Audio</strong>
+            <small>Noise Control</small>
+          </div>
+          <div class="showcase-card muted">
+            <span>Deal</span>
+            <strong>Workspace</strong>
+            <small>-15%</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-toolbar" aria-label="Produktsuche und Filter" id="produkte">
+        <div>
+          <p class="eyebrow">Sortiment</p>
+          <h2>Produkte</h2>
+        </div>
+        <div class="controls">
+          <label class="search-field">
+            <span>Suche</span>
+            <input id="searchInput" type="search" placeholder="Produkt suchen" autocomplete="off" />
+          </label>
+          <label class="select-field">
+            <span>Kategorie</span>
+            <select id="categorySelect">
+              <option value="all">Alle</option>
+            </select>
+          </label>
+          <label class="select-field">
+            <span>Sortierung</span>
+            <select id="sortSelect">
+              <option value="featured">Empfohlen</option>
+              <option value="priceAsc">Preis aufsteigend</option>
+              <option value="priceDesc">Preis absteigend</option>
+              <option value="ratingDesc">Beste Bewertung</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="product-grid" id="productGrid" aria-live="polite"></section>
+
+      <section class="service-grid" id="service" aria-labelledby="serviceTitle">
+        <div class="section-intro">
+          <p class="eyebrow">Was fuer einen echten Shop noetig ist</p>
+          <h2 id="serviceTitle">Von Testdaten bis Live-Betrieb</h2>
+        </div>
+        <article>
+          <h3>Produktdaten</h3>
+          <p>Namen, Beschreibungen, Preise, Kategorien, Varianten, Bilder, Lagerbestand und Steuern.</p>
+        </article>
+        <article>
+          <h3>Commerce-Logik</h3>
+          <p>Warenkorb, Checkout, Versandregeln, Gutscheine, Retouren und Bestellstatus.</p>
+        </article>
+        <article>
+          <h3>Vertrauen</h3>
+          <p>Impressum, Datenschutz, AGB, Widerruf, sichere Zahlung und transparente Lieferzeiten.</p>
+        </article>
+      </section>
+
+      <section class="checkout-preview" id="checkout" aria-labelledby="checkoutTitle">
+        <div>
+          <p class="eyebrow">Test-Checkout</p>
+          <h2 id="checkoutTitle">Bereit fuer den naechsten Schritt</h2>
+          <p>
+            Dieser Prototyp simuliert den Warenkorb im Browser. Fuer echte Bestellungen braucht
+            er ein Backend, Zahlungsanbieter und eine Datenbank.
+          </p>
+        </div>
+        <button class="primary-action" type="button" data-open-cart>Warenkorb pruefen</button>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+      <div class="cart-panel" role="dialog" aria-modal="true">
+        <div class="cart-head">
+          <div>
+            <p class="eyebrow">Deine Auswahl</p>
+            <h2 id="cartTitle">Warenkorb</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-cart aria-label="Warenkorb schliessen">x</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-summary">
+          <div><span>Zwischensumme</span><strong id="subtotal">0,00 EUR</strong></div>
+          <div><span>Versand</span><strong id="shipping">0,00 EUR</strong></div>
+          <div class="total"><span>Gesamt</span><strong id="total">0,00 EUR</strong></div>
+        </div>
+        <form class="checkout-form">
+          <label>
+            E-Mail
+            <input type="email" placeholder="kunde@example.com" />
+          </label>
+          <label>
+            Lieferland
+            <select>
+              <option>Deutschland</option>
+              <option>Oesterreich</option>
+              <option>Schweiz</option>
+            </select>
+          </label>
+          <button class="primary-action full" type="button" id="checkoutButton">Testbestellung ausloesen</button>
+          <p class="form-note" id="checkoutMessage"></p>
+        </form>
+      </div>
+    </aside>
+
+    <script>
+      const state = {
+        shop: {
+          freeShippingFrom: 120,
+          defaultShipping: 4.9
+        },
+        products: [],
+        cart: new Map(),
+        category: "all",
+        search: "",
+        sort: "featured"
+      };
+
+      const formatter = new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "EUR"
+      });
+
+      const grid = document.querySelector("#productGrid");
+      const categorySelect = document.querySelector("#categorySelect");
+      const searchInput = document.querySelector("#searchInput");
+      const sortSelect = document.querySelector("#sortSelect");
+      const cartDrawer = document.querySelector("#cartDrawer");
+      const cartItems = document.querySelector("#cartItems");
+      const cartCount = document.querySelector("#cartCount");
+      const subtotal = document.querySelector("#subtotal");
+      const shipping = document.querySelector("#shipping");
+      const total = document.querySelector("#total");
+      const checkoutMessage = document.querySelector("#checkoutMessage");
+
+      async function loadProducts() {
+        try {
+          const response = await fetch("products.json");
+          if (!response.ok) throw new Error("products.json konnte nicht geladen werden.");
+          const data = await response.json();
+          state.shop = data.shop;
+          state.products = data.products;
+          renderCategories(data.categories);
+          renderProducts();
+        } catch (error) {
+          grid.innerHTML = `<p class="empty-state">${error.message} Starte die Seite ueber einen lokalen Server, damit JSON geladen werden kann.</p>`;
+        }
+      }
+
+      function renderCategories(categories) {
+        categories.forEach((category) => {
+          const option = document.createElement("option");
+          option.value = category.slug;
+          option.textContent = category.name;
+          categorySelect.append(option);
+        });
+      }
+
+      function getVisibleProducts() {
+        const term = state.search.toLowerCase().trim();
+        return state.products
+          .filter((product) => state.category === "all" || product.category === state.category)
+          .filter((product) => {
+            const haystack = `${product.name} ${product.description} ${product.tags.join(" ")}`.toLowerCase();
+            return haystack.includes(term);
+          })
+          .sort((a, b) => {
+            if (state.sort === "priceAsc") return a.price - b.price;
+            if (state.sort === "priceDesc") return b.price - a.price;
+            if (state.sort === "ratingDesc") return b.rating - a.rating;
+            return a.featuredOrder - b.featuredOrder;
+          });
+      }
+
+      function renderProducts() {
+        const products = getVisibleProducts();
+        if (!products.length) {
+          grid.innerHTML = `<p class="empty-state">Keine Produkte gefunden.</p>`;
+          return;
+        }
+
+        grid.innerHTML = products.map((product) => `
+          <article class="product-card">
+            <div class="product-image">
+              <img src="${product.image}" alt="${product.name}" loading="lazy" />
+              <span>${product.badge}</span>
+            </div>
+            <div class="product-content">
+              <div class="product-meta">
+                <span>${product.categoryLabel}</span>
+                <span>${product.rating.toFixed(1)} Sterne</span>
+              </div>
+              <h3>${product.name}</h3>
+              <p>${product.description}</p>
+              <div class="product-footer">
+                <strong>${formatter.format(product.price)}</strong>
+                <button type="button" data-add="${product.id}" ${product.stock === 0 ? "disabled" : ""}>
+                  ${product.stock === 0 ? "Ausverkauft" : "In den Warenkorb"}
+                </button>
+              </div>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      function addToCart(productId) {
+        const product = state.products.find((item) => item.id === productId);
+        if (!product || product.stock === 0) return;
+        const current = state.cart.get(productId) || 0;
+        if (current < product.stock) {
+          state.cart.set(productId, current + 1);
+        }
+        renderCart();
+        openCart();
+      }
+
+      function renderCart() {
+        const entries = [...state.cart.entries()];
+        const itemCount = entries.reduce((sum, [, qty]) => sum + qty, 0);
+        const sub = entries.reduce((sum, [id, qty]) => {
+          const product = state.products.find((item) => item.id === id);
+          return sum + product.price * qty;
+        }, 0);
+        const ship = itemCount === 0 ? 0 : sub >= state.shop.freeShippingFrom ? 0 : state.shop.defaultShipping;
+
+        cartCount.textContent = itemCount;
+        subtotal.textContent = formatter.format(sub);
+        shipping.textContent = formatter.format(ship);
+        total.textContent = formatter.format(sub + ship);
+
+        if (!entries.length) {
+          cartItems.innerHTML = `<p class="empty-state compact">Dein Warenkorb ist leer.</p>`;
+          return;
+        }
+
+        cartItems.innerHTML = entries.map(([id, qty]) => {
+          const product = state.products.find((item) => item.id === id);
+          return `
+            <div class="cart-item">
+              <img src="${product.image}" alt="" />
+              <div>
+                <strong>${product.name}</strong>
+                <span>${formatter.format(product.price)}</span>
+              </div>
+              <div class="qty">
+                <button type="button" data-dec="${id}" aria-label="Menge verringern">-</button>
+                <span>${qty}</span>
+                <button type="button" data-inc="${id}" aria-label="Menge erhoehen">+</button>
+              </div>
+            </div>
+          `;
+        }).join("");
+      }
+
+      function openCart() {
+        cartDrawer.setAttribute("aria-hidden", "false");
+        checkoutMessage.textContent = "";
+      }
+
+      function closeCart() {
+        cartDrawer.setAttribute("aria-hidden", "true");
+      }
+
+      document.addEventListener("click", (event) => {
+        const addButton = event.target.closest("[data-add]");
+        const incButton = event.target.closest("[data-inc]");
+        const decButton = event.target.closest("[data-dec]");
+        if (addButton) addToCart(addButton.dataset.add);
+        if (incButton) addToCart(incButton.dataset.inc);
+        if (decButton) {
+          const id = decButton.dataset.dec;
+          const next = (state.cart.get(id) || 0) - 1;
+          next > 0 ? state.cart.set(id, next) : state.cart.delete(id);
+          renderCart();
+        }
+        if (event.target.closest("[data-open-cart]")) openCart();
+        if (event.target.closest("[data-close-cart]") || event.target === cartDrawer) closeCart();
+      });
+
+      searchInput.addEventListener("input", (event) => {
+        state.search = event.target.value;
+        renderProducts();
+      });
+
+      categorySelect.addEventListener("change", (event) => {
+        state.category = event.target.value;
+        renderProducts();
+      });
+
+      sortSelect.addEventListener("change", (event) => {
+        state.sort = event.target.value;
+        renderProducts();
+      });
+
+      document.querySelector("#checkoutButton").addEventListener("click", () => {
+        checkoutMessage.textContent = state.cart.size
+          ? "Testbestellung erstellt. Fuer echte Bestellungen fehlt noch die Backend-Anbindung."
+          : "Lege zuerst ein Produkt in den Warenkorb.";
+      });
+
+      loadProducts();
+      renderCart();
+    </script>
+  </body>
+</html>
