@@ -3,358 +3,344 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nordmarkt Testshop</title>
+    <title>Cobe Webdesign | Demo anfragen</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="Nordmarkt Startseite">
-        <span class="brand-mark">N</span>
-        <span>
-          <strong>Nordmarkt</strong>
-          <small>Testshop</small>
-        </span>
+      <a class="brand" href="#start" aria-label="Cobe Webdesign Start">
+        <img src="assets/logo.jpg" alt="Cobe Webdesign Logo" />
       </a>
-
-      <nav class="top-nav" aria-label="Hauptnavigation">
-        <a href="#produkte">Produkte</a>
-        <a href="#service">Service</a>
-        <a href="#checkout">Checkout</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="#angebot">Angebot</a>
+        <a href="#laufzeiten">Laufzeiten</a>
+        <a href="#demo">Demo anfragen</a>
+        <a href="#konto">Konto</a>
       </nav>
-
-      <button class="cart-button" type="button" data-open-cart>
-        Warenkorb
-        <span id="cartCount">0</span>
-      </button>
+      <a class="header-action" href="#demo">Gratis Demo</a>
     </header>
 
-    <main>
-      <section class="hero" aria-labelledby="heroTitle">
+    <main id="start">
+      <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Kuratiert fuer Alltag, Arbeit und Reise</p>
-          <h1 id="heroTitle">Ein moderner Test-Onlineshop mit echten Shop-Funktionen.</h1>
+          <p class="eyebrow">Webdesign fuer kleine Unternehmen</p>
+          <h1>Moderne Webseiten, die du nicht selbst pflegen musst.</h1>
           <p>
-            Produkte, Kategorien, Preise und Bestandsdaten kommen aus einer JSON-Datei. Das
-            Design ist responsiv und kann spaeter direkt an echte Inhalte angepasst werden.
+            Cobe Webdesign erstellt und verwaltet professionelle Websites fuer kleine Unternehmen,
+            lokale Dienstleister und Selbststaendige. Die erste Demo ist kostenlos, danach wird fair
+            nach Aufwand kalkuliert.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#produkte">Produkte ansehen</a>
-            <a class="secondary-action" href="#service">Shop-Anforderungen</a>
+            <a class="primary-action" href="#demo">Kostenlose Demo anfragen</a>
+            <a class="secondary-action" href="#laufzeiten">Preise ansehen</a>
           </div>
+          <p class="tax-note" data-tax-note></p>
         </div>
-
-        <div class="hero-showcase" aria-label="Ausgewaehlte Shop-Highlights">
-          <div class="showcase-card large">
-            <span>Neu</span>
-            <strong>Urban Pack</strong>
-            <small>ab 89,00 EUR</small>
+        <div class="hero-panel">
+          <div class="browser-bar">
+            <span></span><span></span><span></span>
           </div>
-          <div class="showcase-card">
-            <span>Top</span>
-            <strong>Audio</strong>
-            <small>Noise Control</small>
+          <div class="mock-site">
+            <div class="mock-nav"></div>
+            <div class="mock-hero"></div>
+            <div class="mock-grid">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mock-copy"></div>
           </div>
-          <div class="showcase-card muted">
-            <span>Deal</span>
-            <strong>Workspace</strong>
-            <small>-15%</small>
+          <div class="floating-metric">
+            <strong>0 EUR</strong>
+            <span>erste Demo</span>
           </div>
         </div>
       </section>
 
-      <section class="shop-toolbar" aria-label="Produktsuche und Filter" id="produkte">
-        <div>
-          <p class="eyebrow">Sortiment</p>
-          <h2>Produkte</h2>
-        </div>
-        <div class="controls">
-          <label class="search-field">
-            <span>Suche</span>
-            <input id="searchInput" type="search" placeholder="Produkt suchen" autocomplete="off" />
-          </label>
-          <label class="select-field">
-            <span>Kategorie</span>
-            <select id="categorySelect">
-              <option value="all">Alle</option>
-            </select>
-          </label>
-          <label class="select-field">
-            <span>Sortierung</span>
-            <select id="sortSelect">
-              <option value="featured">Empfohlen</option>
-              <option value="priceAsc">Preis aufsteigend</option>
-              <option value="priceDesc">Preis absteigend</option>
-              <option value="ratingDesc">Beste Bewertung</option>
-            </select>
-          </label>
-        </div>
+      <section class="section-head" id="angebot">
+        <p class="eyebrow">Angebot</p>
+        <h2>Einmalige Erstellung plus laufende Betreuung.</h2>
+        <p>
+          Die Demo ist gratis. Erst wenn dir Richtung und Umfang gefallen, entsteht daraus ein
+          individuelles Angebot fuer die finale Website.
+        </p>
       </section>
 
-      <section class="product-grid" id="productGrid" aria-live="polite"></section>
-
-      <section class="service-grid" id="service" aria-labelledby="serviceTitle">
-        <div class="section-intro">
-          <p class="eyebrow">Was fuer einen echten Shop noetig ist</p>
-          <h2 id="serviceTitle">Von Testdaten bis Live-Betrieb</h2>
-        </div>
-        <article>
-          <h3>Produktdaten</h3>
-          <p>Namen, Beschreibungen, Preise, Kategorien, Varianten, Bilder, Lagerbestand und Steuern.</p>
+      <section class="offer-grid">
+        <article class="offer-card primary">
+          <span>Start</span>
+          <h3 id="setupName">Website-Erstellung</h3>
+          <p id="setupDescription"></p>
+          <strong id="setupPrice"></strong>
         </article>
-        <article>
-          <h3>Commerce-Logik</h3>
-          <p>Warenkorb, Checkout, Versandregeln, Gutscheine, Retouren und Bestellstatus.</p>
+        <article class="offer-card">
+          <span>Enthalten</span>
+          <ul id="includedList"></ul>
         </article>
-        <article>
-          <h3>Vertrauen</h3>
-          <p>Impressum, Datenschutz, AGB, Widerruf, sichere Zahlung und transparente Lieferzeiten.</p>
+        <article class="offer-card">
+          <span>Ablauf</span>
+          <ol id="stepsList"></ol>
         </article>
       </section>
 
-      <section class="checkout-preview" id="checkout" aria-labelledby="checkoutTitle">
-        <div>
-          <p class="eyebrow">Test-Checkout</p>
-          <h2 id="checkoutTitle">Bereit fuer den naechsten Schritt</h2>
+      <section class="section-head" id="laufzeiten">
+        <p class="eyebrow">Mindestlaufzeit</p>
+        <h2>Waehle die passende Betreuung.</h2>
+        <p id="renewalNotice"></p>
+      </section>
+
+      <section class="plans" id="plans" aria-live="polite"></section>
+
+      <section class="request-section" id="demo">
+        <div class="request-copy">
+          <p class="eyebrow">Demo-Anfrage</p>
+          <h2>Erzaehl mir, welche Website du brauchst.</h2>
           <p>
-            Dieser Prototyp simuliert den Warenkorb im Browser. Fuer echte Bestellungen braucht
-            er ein Backend, Zahlungsanbieter und eine Datenbank.
+            Das Formular sammelt die wichtigsten Inhalte fuer eine erste Einschaetzung. Im echten
+            Betrieb sendet ein Backend daraus eine Eingangsbestätigung per E-Mail an den Kunden und
+            legt die Anfrage im Adminbereich ab.
+          </p>
+          <div class="mini-summary" id="planSummary">Bitte waehle zuerst eine Laufzeit aus.</div>
+        </div>
+
+        <form class="demo-form" id="demoForm">
+          <div class="form-grid">
+            <label>
+              Vor- und Nachname *
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Firmenname
+              <input name="company" autocomplete="organization" />
+            </label>
+            <label>
+              E-Mail-Adresse *
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Telefonnummer
+              <input name="phone" type="tel" autocomplete="tel" />
+            </label>
+            <label>
+              Branche
+              <input name="industry" placeholder="z. B. Friseur, Handwerk, Beratung" />
+            </label>
+            <label>
+              Bestehende Website
+              <input name="currentWebsite" type="url" placeholder="https://..." />
+            </label>
+            <label>
+              Gewuenschte Seiten
+              <select name="pages">
+                <option>Onepager</option>
+                <option>Startseite + 3 Unterseiten</option>
+                <option>Startseite + 5 Unterseiten</option>
+                <option>Individuell</option>
+              </select>
+            </label>
+            <label>
+              Gewuenschte Laufzeit
+              <select name="plan" id="planSelect" required></select>
+            </label>
+          </div>
+          <label>
+            Projektbeschreibung *
+            <textarea name="message" rows="6" placeholder="Was soll die Website koennen? Welche Inhalte, Farben, Beispiele oder Funktionen sind wichtig?" required></textarea>
+          </label>
+          <label class="check-row">
+            <input name="account" type="checkbox" checked />
+            Kundenkonto fuer Dashboard und Projektstatus vorbereiten
+          </label>
+          <label class="check-row">
+            <input name="taxAccepted" type="checkbox" required />
+            Ich habe verstanden: Gemäß § 19 UStG wird keine Umsatzsteuer berechnet oder ausgewiesen.
+          </label>
+          <button class="primary-action full" type="submit">Demo-Anfrage absenden</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </section>
+
+      <section class="account-section" id="konto">
+        <div>
+          <p class="eyebrow">Kundenkonto</p>
+          <h2>Login- und Dashboard-Prototyp.</h2>
+          <p>
+            Fuer den Test wird das Konto lokal im Browser simuliert. Fuer echte sichere Logins
+            brauchst du Authentifizierung mit gehashten Passwoertern, Datenbank, Session-Schutz
+            und Rollen fuer Kunde und Admin.
           </p>
         </div>
-        <button class="primary-action" type="button" data-open-cart>Warenkorb pruefen</button>
+        <div class="account-panels">
+          <form class="account-card" id="accountForm">
+            <h3>Konto erstellen</h3>
+            <label>
+              Name
+              <input name="accountName" required />
+            </label>
+            <label>
+              E-Mail
+              <input name="accountEmail" type="email" required />
+            </label>
+            <label>
+              Passwort
+              <input name="accountPassword" type="password" minlength="8" required />
+            </label>
+            <button class="secondary-action full" type="submit">Konto lokal erstellen</button>
+          </form>
+          <section class="dashboard-card" id="dashboard">
+            <h3>Dashboard</h3>
+            <div id="dashboardContent">
+              <p>Noch kein Konto erstellt.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="payment-section">
+        <p class="eyebrow">Zahlung</p>
+        <h2>Stripe und PayPal werden als echte Server-Anbindung geplant.</h2>
+        <div class="payment-grid">
+          <article>
+            <h3>Stripe</h3>
+            <p>Ideal fuer Karten, SEPA, Apple Pay, Google Pay und Abos ueber Stripe Billing.</p>
+          </article>
+          <article>
+            <h3>PayPal</h3>
+            <p>Geeignet fuer PayPal-Zahlungen und wiederkehrende Zahlungen ueber Subscriptions.</p>
+          </article>
+          <article>
+            <h3>Vercel</h3>
+            <p>Hosting, HTTPS und Serverless API sind moeglich. Auth, Datenbank und E-Mail muessen trotzdem angebunden werden.</p>
+          </article>
+        </div>
       </section>
     </main>
 
-    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
-      <div class="cart-panel" role="dialog" aria-modal="true">
-        <div class="cart-head">
-          <div>
-            <p class="eyebrow">Deine Auswahl</p>
-            <h2 id="cartTitle">Warenkorb</h2>
-          </div>
-          <button class="icon-button" type="button" data-close-cart aria-label="Warenkorb schliessen">x</button>
-        </div>
-        <div class="cart-items" id="cartItems"></div>
-        <div class="cart-summary">
-          <div><span>Zwischensumme</span><strong id="subtotal">0,00 EUR</strong></div>
-          <div><span>Versand</span><strong id="shipping">0,00 EUR</strong></div>
-          <div class="total"><span>Gesamt</span><strong id="total">0,00 EUR</strong></div>
-        </div>
-        <form class="checkout-form">
-          <label>
-            E-Mail
-            <input type="email" placeholder="kunde@example.com" />
-          </label>
-          <label>
-            Lieferland
-            <select>
-              <option>Deutschland</option>
-              <option>Oesterreich</option>
-              <option>Schweiz</option>
-            </select>
-          </label>
-          <button class="primary-action full" type="button" id="checkoutButton">Testbestellung ausloesen</button>
-          <p class="form-note" id="checkoutMessage"></p>
-        </form>
-      </div>
-    </aside>
-
     <script>
+      const money = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" });
       const state = {
-        shop: {
-          freeShippingFrom: 120,
-          defaultShipping: 4.9
-        },
-        products: [],
-        cart: new Map(),
-        category: "all",
-        search: "",
-        sort: "featured"
+        data: null,
+        selectedPlan: null,
+        requests: JSON.parse(localStorage.getItem("cobeRequests") || "[]"),
+        account: JSON.parse(localStorage.getItem("cobeAccount") || "null")
       };
 
-      const formatter = new Intl.NumberFormat("de-DE", {
-        style: "currency",
-        currency: "EUR"
-      });
+      const plansEl = document.querySelector("#plans");
+      const planSelect = document.querySelector("#planSelect");
+      const planSummary = document.querySelector("#planSummary");
+      const formMessage = document.querySelector("#formMessage");
+      const dashboardContent = document.querySelector("#dashboardContent");
 
-      const grid = document.querySelector("#productGrid");
-      const categorySelect = document.querySelector("#categorySelect");
-      const searchInput = document.querySelector("#searchInput");
-      const sortSelect = document.querySelector("#sortSelect");
-      const cartDrawer = document.querySelector("#cartDrawer");
-      const cartItems = document.querySelector("#cartItems");
-      const cartCount = document.querySelector("#cartCount");
-      const subtotal = document.querySelector("#subtotal");
-      const shipping = document.querySelector("#shipping");
-      const total = document.querySelector("#total");
-      const checkoutMessage = document.querySelector("#checkoutMessage");
-
-      async function loadProducts() {
-        try {
-          const response = await fetch("products.json");
-          if (!response.ok) throw new Error("products.json konnte nicht geladen werden.");
-          const data = await response.json();
-          state.shop = data.shop;
-          state.products = data.products;
-          renderCategories(data.categories);
-          renderProducts();
-        } catch (error) {
-          grid.innerHTML = `<p class="empty-state">${error.message} Starte die Seite ueber einen lokalen Server, damit JSON geladen werden kann.</p>`;
-        }
+      async function init() {
+        const response = await fetch("products.json");
+        state.data = await response.json();
+        document.querySelectorAll("[data-tax-note]").forEach((item) => {
+          item.textContent = state.data.shop.taxNotice;
+        });
+        renderOffer();
+        renderPlans();
+        renderDashboard();
       }
 
-      function renderCategories(categories) {
-        categories.forEach((category) => {
-          const option = document.createElement("option");
-          option.value = category.slug;
-          option.textContent = category.name;
-          categorySelect.append(option);
+      function renderOffer() {
+        const setup = state.data.oneTimeSetup;
+        document.querySelector("#setupName").textContent = setup.name;
+        document.querySelector("#setupDescription").textContent = setup.description;
+        document.querySelector("#setupPrice").textContent = `${money.format(setup.priceFrom)} bis ${money.format(setup.priceTo)}`;
+        document.querySelector("#renewalNotice").textContent = state.data.shop.renewalNotice;
+        document.querySelector("#includedList").innerHTML = setup.included.map((item) => `<li>${item}</li>`).join("");
+        document.querySelector("#stepsList").innerHTML = state.data.nextSteps.map((item) => `<li>${item}</li>`).join("");
+      }
+
+      function renderPlans() {
+        plansEl.innerHTML = state.data.plans.map((plan, index) => `
+          <article class="plan-card ${index === 1 ? "featured" : ""}">
+            <span>${plan.highlight}</span>
+            <h3>${plan.name}</h3>
+            <strong>${money.format(plan.monthlyPrice)} <small>/ Monat</small></strong>
+            <p>${plan.description}</p>
+            <button type="button" data-plan="${plan.id}">Laufzeit waehlen</button>
+          </article>
+        `).join("");
+
+        planSelect.innerHTML = state.data.plans.map((plan) => `
+          <option value="${plan.id}">${plan.name} - ${money.format(plan.monthlyPrice)} pro Monat</option>
+        `).join("");
+        choosePlan(state.data.plans[1].id);
+      }
+
+      function choosePlan(planId) {
+        state.selectedPlan = state.data.plans.find((plan) => plan.id === planId);
+        planSelect.value = planId;
+        planSummary.textContent = `${state.selectedPlan.name}: ${money.format(state.selectedPlan.monthlyPrice)} pro Monat, Mindestlaufzeit ${state.selectedPlan.minimumTermMonths} Monate.`;
+        document.querySelectorAll("[data-plan]").forEach((button) => {
+          button.classList.toggle("active", button.dataset.plan === planId);
         });
       }
 
-      function getVisibleProducts() {
-        const term = state.search.toLowerCase().trim();
-        return state.products
-          .filter((product) => state.category === "all" || product.category === state.category)
-          .filter((product) => {
-            const haystack = `${product.name} ${product.description} ${product.tags.join(" ")}`.toLowerCase();
-            return haystack.includes(term);
-          })
-          .sort((a, b) => {
-            if (state.sort === "priceAsc") return a.price - b.price;
-            if (state.sort === "priceDesc") return b.price - a.price;
-            if (state.sort === "ratingDesc") return b.rating - a.rating;
-            return a.featuredOrder - b.featuredOrder;
-          });
-      }
-
-      function renderProducts() {
-        const products = getVisibleProducts();
-        if (!products.length) {
-          grid.innerHTML = `<p class="empty-state">Keine Produkte gefunden.</p>`;
+      function renderDashboard() {
+        if (!state.account) {
+          dashboardContent.innerHTML = "<p>Noch kein Konto erstellt.</p>";
           return;
         }
 
-        grid.innerHTML = products.map((product) => `
-          <article class="product-card">
-            <div class="product-image">
-              <img src="${product.image}" alt="${product.name}" loading="lazy" />
-              <span>${product.badge}</span>
-            </div>
-            <div class="product-content">
-              <div class="product-meta">
-                <span>${product.categoryLabel}</span>
-                <span>${product.rating.toFixed(1)} Sterne</span>
-              </div>
-              <h3>${product.name}</h3>
-              <p>${product.description}</p>
-              <div class="product-footer">
-                <strong>${formatter.format(product.price)}</strong>
-                <button type="button" data-add="${product.id}" ${product.stock === 0 ? "disabled" : ""}>
-                  ${product.stock === 0 ? "Ausverkauft" : "In den Warenkorb"}
-                </button>
-              </div>
-            </div>
-          </article>
-        `).join("");
-      }
-
-      function addToCart(productId) {
-        const product = state.products.find((item) => item.id === productId);
-        if (!product || product.stock === 0) return;
-        const current = state.cart.get(productId) || 0;
-        if (current < product.stock) {
-          state.cart.set(productId, current + 1);
-        }
-        renderCart();
-        openCart();
-      }
-
-      function renderCart() {
-        const entries = [...state.cart.entries()];
-        const itemCount = entries.reduce((sum, [, qty]) => sum + qty, 0);
-        const sub = entries.reduce((sum, [id, qty]) => {
-          const product = state.products.find((item) => item.id === id);
-          return sum + product.price * qty;
-        }, 0);
-        const ship = itemCount === 0 ? 0 : sub >= state.shop.freeShippingFrom ? 0 : state.shop.defaultShipping;
-
-        cartCount.textContent = itemCount;
-        subtotal.textContent = formatter.format(sub);
-        shipping.textContent = formatter.format(ship);
-        total.textContent = formatter.format(sub + ship);
-
-        if (!entries.length) {
-          cartItems.innerHTML = `<p class="empty-state compact">Dein Warenkorb ist leer.</p>`;
-          return;
-        }
-
-        cartItems.innerHTML = entries.map(([id, qty]) => {
-          const product = state.products.find((item) => item.id === id);
-          return `
-            <div class="cart-item">
-              <img src="${product.image}" alt="" />
-              <div>
-                <strong>${product.name}</strong>
-                <span>${formatter.format(product.price)}</span>
-              </div>
-              <div class="qty">
-                <button type="button" data-dec="${id}" aria-label="Menge verringern">-</button>
-                <span>${qty}</span>
-                <button type="button" data-inc="${id}" aria-label="Menge erhoehen">+</button>
-              </div>
-            </div>
-          `;
-        }).join("");
-      }
-
-      function openCart() {
-        cartDrawer.setAttribute("aria-hidden", "false");
-        checkoutMessage.textContent = "";
-      }
-
-      function closeCart() {
-        cartDrawer.setAttribute("aria-hidden", "true");
+        const latest = state.requests[state.requests.length - 1];
+        dashboardContent.innerHTML = `
+          <div class="status-row"><span>Kunde</span><strong>${state.account.name}</strong></div>
+          <div class="status-row"><span>E-Mail</span><strong>${state.account.email}</strong></div>
+          <div class="status-row"><span>Rolle</span><strong>Kunde</strong></div>
+          <div class="status-row"><span>Projektstatus</span><strong>${latest ? "Demo-Anfrage eingegangen" : "Noch keine Anfrage"}</strong></div>
+          <div class="status-row"><span>Admin-Hinweis</span><strong>${state.requests.length} lokale Anfrage(n)</strong></div>
+        `;
       }
 
       document.addEventListener("click", (event) => {
-        const addButton = event.target.closest("[data-add]");
-        const incButton = event.target.closest("[data-inc]");
-        const decButton = event.target.closest("[data-dec]");
-        if (addButton) addToCart(addButton.dataset.add);
-        if (incButton) addToCart(incButton.dataset.inc);
-        if (decButton) {
-          const id = decButton.dataset.dec;
-          const next = (state.cart.get(id) || 0) - 1;
-          next > 0 ? state.cart.set(id, next) : state.cart.delete(id);
-          renderCart();
+        const planButton = event.target.closest("[data-plan]");
+        if (planButton) choosePlan(planButton.dataset.plan);
+      });
+
+      planSelect.addEventListener("change", (event) => choosePlan(event.target.value));
+
+      document.querySelector("#demoForm").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const formData = Object.fromEntries(new FormData(event.currentTarget).entries());
+        const request = {
+          ...formData,
+          planName: state.selectedPlan.name,
+          monthlyPrice: state.selectedPlan.monthlyPrice,
+          createdAt: new Date().toISOString()
+        };
+
+        try {
+          const response = await fetch("/api/demo-request", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(request)
+          });
+          if (!response.ok) throw new Error("API nicht erreichbar");
+          formMessage.textContent = "Demo-Anfrage eingegangen. Eine E-Mail-Bestaetigung wird vorbereitet.";
+        } catch {
+          formMessage.textContent = "Demo-Anfrage lokal gespeichert. Mit Vercel API wird daraus eine echte E-Mail-Bestaetigung.";
         }
-        if (event.target.closest("[data-open-cart]")) openCart();
-        if (event.target.closest("[data-close-cart]") || event.target === cartDrawer) closeCart();
+
+        state.requests.push(request);
+        localStorage.setItem("cobeRequests", JSON.stringify(state.requests));
+        renderDashboard();
       });
 
-      searchInput.addEventListener("input", (event) => {
-        state.search = event.target.value;
-        renderProducts();
+      document.querySelector("#accountForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const values = Object.fromEntries(new FormData(event.currentTarget).entries());
+        state.account = {
+          name: values.accountName,
+          email: values.accountEmail,
+          createdAt: new Date().toISOString()
+        };
+        localStorage.setItem("cobeAccount", JSON.stringify(state.account));
+        renderDashboard();
       });
 
-      categorySelect.addEventListener("change", (event) => {
-        state.category = event.target.value;
-        renderProducts();
+      init().catch(() => {
+        document.body.insertAdjacentHTML("afterbegin", "<div class='load-error'>products.json konnte nicht geladen werden. Bitte ueber einen lokalen Server oeffnen.</div>");
       });
-
-      sortSelect.addEventListener("change", (event) => {
-        state.sort = event.target.value;
-        renderProducts();
-      });
-
-      document.querySelector("#checkoutButton").addEventListener("click", () => {
-        checkoutMessage.textContent = state.cart.size
-          ? "Testbestellung erstellt. Fuer echte Bestellungen fehlt noch die Backend-Anbindung."
-          : "Lege zuerst ein Produkt in den Warenkorb.";
-      });
-
-      loadProducts();
-      renderCart();
     </script>
   </body>
 </html>

@@ -1,113 +1,69 @@
 {
   "shop": {
-    "name": "Nordmarkt",
+    "name": "Cobe Webdesign",
+    "claim": "Moderne Webseiten fuer kleine Unternehmen",
     "currency": "EUR",
-    "freeShippingFrom": 120,
-    "defaultShipping": 4.9,
-    "country": "DE"
+    "taxNotice": "Gemäß § 19 UStG wird keine Umsatzsteuer berechnet oder ausgewiesen.",
+    "renewalNotice": "Nach Ablauf der Mindestlaufzeit verlaengert sich der Vertrag um die gleiche Laufzeit, sofern nicht spaetestens 1 Monat vor Laufzeitende gekuendigt wird.",
+    "targetAudience": "Kleine Unternehmen, Selbststaendige und lokale Dienstleister, die eine moderne Website erstellen und verwalten lassen moechten."
   },
-  "categories": [
+  "oneTimeSetup": {
+    "name": "Website-Erstellung nach kostenloser Demo",
+    "priceFrom": 400,
+    "priceTo": 800,
+    "description": "Die erste Demo ist kostenlos. Danach wird die finale Erstellung je nach Umfang, Seitenanzahl, Designwunsch und Zusatzfunktionen kalkuliert.",
+    "included": [
+      "Kostenlose Erst-Demo",
+      "Modernes responsives Webdesign",
+      "Einrichtung der Grundseiten",
+      "Technische Umsetzung und Veroeffentlichung",
+      "Abstimmung nach Kundenwunsch"
+    ]
+  },
+  "plans": [
     {
-      "name": "Taschen",
-      "slug": "bags"
+      "id": "plan-6",
+      "name": "6 Monate",
+      "monthlyPrice": 60,
+      "minimumTermMonths": 6,
+      "highlight": "Flexibel starten",
+      "description": "Geeignet, wenn du erst testen moechtest, wie deine neue Website fuer dein Unternehmen arbeitet."
     },
     {
-      "name": "Audio",
-      "slug": "audio"
+      "id": "plan-12",
+      "name": "12 Monate",
+      "monthlyPrice": 50,
+      "minimumTermMonths": 12,
+      "highlight": "Beliebt",
+      "description": "Guter Mittelweg fuer kleine Unternehmen, die Planungssicherheit und laufende Betreuung suchen."
     },
     {
-      "name": "Workspace",
-      "slug": "workspace"
-    },
-    {
-      "name": "Accessoires",
-      "slug": "accessories"
+      "id": "plan-24",
+      "name": "24 Monate",
+      "monthlyPrice": 40,
+      "minimumTermMonths": 24,
+      "highlight": "Bester Preis",
+      "description": "Die guenstigste monatliche Betreuung fuer langfristige Zusammenarbeit und kontinuierliche Pflege."
     }
   ],
-  "products": [
-    {
-      "id": "bag-urban-pack",
-      "name": "Urban Pack",
-      "category": "bags",
-      "categoryLabel": "Taschen",
-      "description": "Wasserabweisender Rucksack mit Laptopfach, klarer Form und smarten Innenfaechern.",
-      "price": 89,
-      "stock": 9,
-      "rating": 4.8,
-      "badge": "Bestseller",
-      "featuredOrder": 1,
-      "tags": ["rucksack", "reise", "laptop"],
-      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": "audio-hush-one",
-      "name": "Hush One",
-      "category": "audio",
-      "categoryLabel": "Audio",
-      "description": "Kabellose Kopfhoerer mit aktiver Geraeuschreduzierung und 32 Stunden Akku.",
-      "price": 129,
-      "stock": 12,
-      "rating": 4.7,
-      "badge": "Neu",
-      "featuredOrder": 2,
-      "tags": ["kopfhoerer", "bluetooth", "noise cancelling"],
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": "workspace-lift-stand",
-      "name": "Lift Stand",
-      "category": "workspace",
-      "categoryLabel": "Workspace",
-      "description": "Stabiler Notebook-Staender aus Aluminium fuer einen aufgeraeumten Arbeitsplatz.",
-      "price": 54,
-      "stock": 16,
-      "rating": 4.5,
-      "badge": "Ergonomie",
-      "featuredOrder": 3,
-      "tags": ["laptop", "schreibtisch", "home office"],
-      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": "accessory-field-watch",
-      "name": "Field Watch",
-      "category": "accessories",
-      "categoryLabel": "Accessoires",
-      "description": "Minimalistische Uhr mit robustem Textilband und kratzfestem Glas.",
-      "price": 74,
-      "stock": 7,
-      "rating": 4.6,
-      "badge": "Limited",
-      "featuredOrder": 4,
-      "tags": ["uhr", "accessoire", "alltag"],
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": "bag-sling-lite",
-      "name": "Sling Lite",
-      "category": "bags",
-      "categoryLabel": "Taschen",
-      "description": "Kompakte Crossbody-Bag fuer Smartphone, Kamera, Wallet und schnelle Wege.",
-      "price": 39,
-      "stock": 18,
-      "rating": 4.4,
-      "badge": "Leicht",
-      "featuredOrder": 5,
-      "tags": ["tasche", "crossbody", "travel"],
-      "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": "workspace-desk-lamp",
-      "name": "Focus Lamp",
-      "category": "workspace",
-      "categoryLabel": "Workspace",
-      "description": "Dimmbare LED-Schreibtischlampe mit warmem Licht und USB-C Anschluss.",
-      "price": 68,
-      "stock": 0,
-      "rating": 4.3,
-      "badge": "Ausverkauft",
-      "featuredOrder": 6,
-      "tags": ["lampe", "led", "office"],
-      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80"
-    }
+  "formFields": [
+    "Vor- und Nachname",
+    "Firmenname",
+    "E-Mail-Adresse",
+    "Telefonnummer",
+    "Branche",
+    "Bestehende Website",
+    "Gewuenschte Seiten",
+    "Designwunsch",
+    "Wunschlaufzeit",
+    "Projektbeschreibung"
+  ],
+  "nextSteps": [
+    "Kunde sendet Demo-Anfrage mit Kontaktdaten und Projektwunsch.",
+    "Cobe Webdesign prueft Umfang, Zielgruppe und technische Anforderungen.",
+    "Kostenlose Demo wird erstellt oder ein Erstgespraech vereinbart.",
+    "Nach Freigabe wird der finale Preis zwischen 400 und 800 Euro festgelegt.",
+    "Kunde waehlt die Mindestlaufzeit fuer Pflege und Verwaltung.",
+    "Zahlung und Vertrag werden ueber Stripe oder PayPal angebunden."
   ]
 }
